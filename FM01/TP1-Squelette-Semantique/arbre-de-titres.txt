@@ -1,0 +1,15 @@
+Arbre de titres — Landing page SkillHub (TP 1)
+
+h1 : Reprenez la main sur votre reconversion
+  h2 : Nos valeurs
+    h3 : Proximité
+    h3 : Transparence
+    h3 : Exigence
+  h2 : Les ateliers du moment
+    h3 : Initiation à Git et GitHub
+    h3 : HTML5 sémantique et validation W3C
+    h3 : CSS Grid et Flexbox sans framework
+  h2 : Nos formateurs indépendants
+    h3 : Sarah Benali — Développement Front-end
+    h3 : Karim Mansouri — Architecture Web & TypeScript
+  h2 : Créer mon compte

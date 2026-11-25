@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillHub — Interactions JavaScript natif (FM03 · TP 1)</title>
+  <link rel="stylesheet" href="../../FM02/TP4-SkillHub-Accessible/skillhub.css">
+</head>
+<body>
+  <a href="#contenu-principal" class="skip-link">Aller au contenu</a>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">SkillHub</a>
+      <nav id="nav-principale" aria-label="Navigation principale">
+        <button type="button" id="btn-menu" class="btn-secondaire" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+        <ul id="menu-principal">
+          <li><a href="#ateliers" aria-current="page">Ateliers</a></li>
+          <li><a href="#formateurs">Formateurs</a></li>
+          <li><a href="#inscription">S'inscrire</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu-principal">
+    <h1>Catalogue interactif SkillHub</h1>
+    <ul class="grille-ateliers" id="liste-ateliers">
+      <li class="carte" data-id="a1">
+        <div>
+          <h2 id="titre-a1">React en 3 jours</h2>
+          <p class="meta">Débutant · 450 € · 8 places</p>
+        </div>
+        <button type="button" class="btn-primaire" data-inscrire="a1" aria-describedby="titre-a1">M'inscrire</button>
+      </li>
+      <li class="carte" data-id="a2">
+        <div>
+          <h2 id="titre-a2">HTML5 et Accessibilité</h2>
+          <p class="meta">Débutant · 120 € · 4 places</p>
+        </div>
+        <button type="button" class="btn-primaire" data-inscrire="a2" aria-describedby="titre-a2">M'inscrire</button>
+      </li>
+    </ul>
+    <p id="message-statut" role="status" aria-live="polite" class="aide-champ"></p>
+  </main>
+
+  <dialog id="modale-inscription" aria-labelledby="t-modale">
+    <div class="dialog-contenu">
+      <h2 id="t-modale">Finaliser l'inscription</h2>
+      <p id="atelier-selectionne" class="meta"></p>
+      <form id="form-inscription" method="dialog" novalidate>
+        <div>
+          <label for="courriel">Adresse électronique</label>
+          <input id="courriel" name="courriel" type="email" required aria-describedby="aide-courriel" autocomplete="email">
+          <p id="aide-courriel" class="aide-champ" aria-live="polite">Format attendu : nom@domaine.fr</p>
+        </div>
+        <div class="actions-modale">
+          <button type="submit" value="creer" id="btn-soumettre" class="btn-primaire">Confirmer</button>
+          <button type="submit" value="annuler" formnovalidate class="btn-secondaire">Annuler</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

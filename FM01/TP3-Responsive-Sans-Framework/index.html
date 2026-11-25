@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkillHub — Apprendre avec un formateur indépendant</title>
+  <meta name="description" content="SkillHub met en relation des apprenants en reconversion et des formateurs indépendants à travers des ateliers pratiques.">
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; color: #0B2540; background: #FFFFFF; }
+    .accroche { padding: 2rem 1rem; background: #F8FAFC; }
+  </style>
+  <link rel="stylesheet" href="css/skillhub.css">
+  <script src="js/skillhub.js" defer></script>
+</head>
+<body>
+  <a class="evitement" href="#contenu">Aller au contenu</a>
+
+  <div class="page">
+    <header>
+      <div class="header-inner">
+        <p class="logo">SkillHub</p>
+        <nav aria-label="Navigation principale">
+          <ul>
+            <li><a href="#valeurs">Nos valeurs</a></li>
+            <li><a href="#ateliers">Ateliers</a></li>
+            <li><a href="#formateurs">Formateurs</a></li>
+            <li><a href="#inscription">S'inscrire</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section id="accroche" class="accroche" aria-labelledby="t-accroche">
+        <h1 id="t-accroche">Reprenez la main sur votre reconversion</h1>
+        <p class="texte-borne">Des ateliers courts et concrets, animés par des formateurs indépendants pour progresser à votre rythme.</p>
+        <a class="action" href="#inscription">Créer mon compte</a>
+      </section>
+
+      <section id="valeurs" aria-labelledby="t-valeurs">
+        <h2 id="t-valeurs">Nos valeurs</h2>
+        <div class="grille-valeurs">
+          <article class="carte-valeur">
+            <h3>
+              <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+              Proximité
+            </h3>
+            <p>Des groupes restreints de 8 apprenants maximum pour poser toutes vos questions en direct.</p>
+          </article>
+          <article class="carte-valeur">
+            <h3>
+              <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+              Transparence
+            </h3>
+            <p>Le niveau requis, la durée et le tarif complet sont affichés avant toute inscription.</p>
+          </article>
+          <article class="carte-valeur">
+            <h3>
+              <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+              Exigence
+            </h3>
+            <p>Chaque atelier repose sur un cas pratique réel validé selon les standards du Web.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="ateliers" aria-labelledby="t-ateliers">
+        <h2 id="t-ateliers">Les ateliers du moment</h2>
+        <ul class="ateliers">
+          <li class="atelier">
+            <h3>Initiation à Git et GitHub</h3>
+            <p class="meta">Débutant · 2 h · 90 € · 5 places</p>
+            <p>Créer un dépôt, rédiger des commits atomiques et collaborer sans perdre son historique.</p>
+            <a class="action" href="#inscription">M'inscrire</a>
+          </li>
+          <li class="atelier">
+            <h3>HTML5 sémantique et validation W3C</h3>
+            <p class="meta">Débutant · 3 h · 120 € · 4 places</p>
+            <p>Structurer un document accessible et conforme aux standards du W3C sans soupe de div.</p>
+            <a class="action" href="#inscription">M'inscrire</a>
+          </li>
+          <li class="atelier">
+            <h3>CSS Grid et Flexbox sans framework</h3>
+            <p class="meta">Intermédiaire · 3 h · 150 € · Complet</p>
+            <p>Concevoir des mises en page fluides en mobile-first sur trois paliers d'écran.</p>
+            <span class="badge-complet">Atelier complet</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="formateurs" aria-labelledby="t-formateurs">
+        <h2 id="t-formateurs">Nos formateurs indépendants</h2>
+        <div class="grille-formateurs">
+          <article class="carte-formateur">
+            <h3>Sarah Benali — Développement Front-end</h3>
+            <p>8 ans d'expérience en intégration sémantique, ergonomie web et accessibilité RGAA.</p>
+          </article>
+          <article class="carte-formateur">
+            <h3>Karim Mansouri — Architecture Web &amp; TypeScript</h3>
+            <p>Formateur indépendant spécialisé dans les architectures front-end robustes et le typage strict.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="inscription" class="inscription" aria-labelledby="t-inscription">
+        <h2 id="t-inscription">Créer mon compte</h2>
+        <form action="/inscription" method="post">
+          <p>
+            <label for="courriel">Adresse électronique</label>
+            <input id="courriel" name="courriel" type="email" autocomplete="email" required aria-describedby="aide-courriel">
+            <span id="aide-courriel" class="aide">Nous ne la transmettons à personne.</span>
+          </p>
+          <p>
+            <label for="profil">Je suis</label>
+            <select id="profil" name="profil" required>
+              <option value="">Choisissez votre profil</option>
+              <option value="apprenant">En reconversion</option>
+              <option value="formateur">Formateur indépendant</option>
+            </select>
+          </p>
+          <button type="submit" class="action">Créer mon compte</button>
+        </form>
+      </section>
+    </main>
+
+    <aside aria-label="Informations pratiques">
+      <h2>Prochaine session collective</h2>
+      <p>Tous les mardis et jeudis de 18h30 à 20h30 en visioconférence ou sur le campus IMIE Paris.</p>
+    </aside>
+
+    <footer>
+      <p>SkillHub · IMIE Paris · Projet pédagogique CDWFS (BC01-FM01)</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkillHub — Apprendre avec un formateur indépendant</title>
+  <meta name="description" content="SkillHub met en relation des apprenants en reconversion et des formateurs indépendants à travers des ateliers pratiques.">
+</head>
+<body>
+  <a href="#contenu">Aller au contenu</a>
+
+  <header>
+    <p><strong>SkillHub</strong></p>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#valeurs">Nos valeurs</a></li>
+        <li><a href="#ateliers">Ateliers</a></li>
+        <li><a href="#formateurs">Formateurs</a></li>
+        <li><a href="#inscription">S'inscrire</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section id="accroche" aria-labelledby="t-accroche">
+      <h1 id="t-accroche">Reprenez la main sur votre reconversion</h1>
+      <p>Des ateliers courts et concrets, animés par des formateurs indépendants pour progresser à votre rythme.</p>
+      <p><a href="#inscription">Créer mon compte</a></p>
+    </section>
+
+    <section id="valeurs" aria-labelledby="t-valeurs">
+      <h2 id="t-valeurs">Nos valeurs</h2>
+      <article>
+        <h3>Proximité</h3>
+        <p>Des groupes restreints de 8 apprenants maximum pour poser toutes vos questions en direct.</p>
+      </article>
+      <article>
+        <h3>Transparence</h3>
+        <p>Le niveau requis, la durée et le tarif complet sont affichés avant toute inscription.</p>
+      </article>
+      <article>
+        <h3>Exigence</h3>
+        <p>Chaque atelier repose sur un cas pratique réel validé selon les standards du Web.</p>
+      </article>
+    </section>
+
+    <section id="ateliers" aria-labelledby="t-ateliers">
+      <h2 id="t-ateliers">Les ateliers du moment</h2>
+      <ul>
+        <li>
+          <article>
+            <h3>Initiation à Git et GitHub</h3>
+            <p>Niveau : Débutant · Durée : 2 h · Tarif : 90 € · 5 places restantes</p>
+            <p>Créer un dépôt, rédiger des commits atomiques et collaborer sans perdre son historique.</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>HTML5 sémantique et validation W3C</h3>
+            <p>Niveau : Débutant · Durée : 3 h · Tarif : 120 € · 4 places restantes</p>
+            <p>Structurer un document accessible et conforme aux standards du W3C sans soupe de div.</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>CSS Grid et Flexbox sans framework</h3>
+            <p>Niveau : Intermédiaire · Durée : 3 h · Tarif : 150 € · Complet</p>
+            <p>Concevoir des mises en page fluides en mobile-first sur trois paliers d'écran.</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section id="formateurs" aria-labelledby="t-formateurs">
+      <h2 id="t-formateurs">Nos formateurs indépendants</h2>
+      <article>
+        <h3>Sarah Benali — Développement Front-end</h3>
+        <p>8 ans d'expérience en intégration sémantique, ergonomie web et accessibilité RGAA.</p>
+      </article>
+      <article>
+        <h3>Karim Mansouri — Architecture Web &amp; TypeScript</h3>
+        <p>Formateur indépendant spécialisé dans les architectures front-end robustes et le typage strict.</p>
+      </article>
+    </section>
+
+    <section id="inscription" aria-labelledby="t-inscription">
+      <h2 id="t-inscription">Créer mon compte</h2>
+      <form action="/inscription" method="post">
+        <p>
+          <label for="courriel">Adresse électronique</label>
+          <input id="courriel" name="courriel" type="email" autocomplete="email" required aria-describedby="aide-courriel">
+          <span id="aide-courriel">Nous ne la transmettons à personne.</span>
+        </p>
+        <p>
+          <label for="profil">Je suis</label>
+          <select id="profil" name="profil" required>
+            <option value="">Choisissez votre profil</option>
+            <option value="apprenant">En reconversion</option>
+            <option value="formateur">Formateur indépendant</option>
+          </select>
+        </p>
+        <button type="submit">Créer mon compte</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>SkillHub · IMIE Paris · Projet pédagogique CDWFS (BC01-FM01)</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,239 @@
+:root {
+  --fond: #FFFFFF;
+  --surface: #F8FAFC;
+  --texte: #0B2540;
+  --secondaire: #475569;
+  --accent: #B45309;
+  --bordure: #CBD5E1;
+  --espace: 1rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--texte);
+  background: var(--fond);
+  overflow-wrap: break-word;
+}
+
+:focus-visible {
+  outline: 3px solid var(--texte);
+  outline-offset: 2px;
+}
+
+.evitement {
+  position: absolute;
+  top: -4rem;
+  left: 1rem;
+  z-index: 10;
+  background: var(--texte);
+  color: var(--fond);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.evitement:focus {
+  top: 1rem;
+}
+
+/* Mobile-First : 1 colonne par défaut (palier 360 px) */
+.page {
+  display: grid;
+  grid-template-areas:
+    "entete"
+    "contenu"
+    "aside"
+    "pied";
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page > header { grid-area: entete; border-bottom: 1px solid var(--bordure); padding: 1rem 0; }
+.page > main   { grid-area: contenu; }
+.page > aside  { grid-area: aside; background: var(--surface); padding: 1.25rem; border-radius: 0.5rem; border: 1px solid var(--bordure); }
+.page > footer { grid-area: pied; border-top: 1px solid var(--bordure); padding: 1rem 0; color: var(--secondaire); font-size: 0.875rem; }
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--texte);
+  text-decoration: underline;
+  padding: 0.25rem 0;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.563rem;
+  line-height: 1.2;
+  margin: 2rem 0 1rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+.texte-borne {
+  max-width: 65ch;
+}
+
+/* Catalogue d'ateliers adaptatif sans media query */
+.ateliers {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.atelier, .carte-valeur, .carte-formateur {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid var(--bordure);
+  border-radius: 0.5rem;
+  background: var(--fond);
+}
+
+.atelier > .action, .atelier > .badge-complet {
+  margin-top: auto;
+}
+
+.meta {
+  font-size: 0.875rem;
+  color: var(--secondaire);
+  margin: 0;
+}
+
+.action {
+  display: inline-block;
+  text-align: center;
+  background: var(--accent);
+  color: var(--fond);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.625rem 1.25rem;
+  min-height: 44px;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.badge-complet {
+  display: inline-block;
+  text-align: center;
+  padding: 0.625rem 1.25rem;
+  background: #E2E8F0;
+  color: var(--secondaire);
+  border-radius: 0.375rem;
+  font-weight: 600;
+}
+
+.grille-valeurs, .grille-formateurs {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+form {
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input, select {
+  font: inherit;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  min-height: 44px;
+  border: 2px solid var(--secondaire);
+  border-radius: 0.375rem;
+}
+
+.aide {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--secondaire);
+  margin-top: 0.25rem;
+}
+
+/* Palier 2 : Tablette (à partir de 48em = 768 px) */
+@media (min-width: 48em) {
+  .grille-valeurs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grille-formateurs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Palier 3 : Bureau (à partir de 64em = 1024 px, testé jusqu'à 1280 px) */
+@media (min-width: 64em) {
+  .page {
+    grid-template-areas:
+      "entete  entete"
+      "contenu aside"
+      "pied    pied";
+    grid-template-columns: 1fr 18rem;
+    gap: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

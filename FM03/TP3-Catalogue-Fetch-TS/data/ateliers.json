@@ -1,0 +1,14 @@
+[
+  { "id": "a1", "titre": "React en 3 jours", "niveau": "avance", "prix": 450, "places": 8, "formateur": "Karim Mansouri" },
+  { "id": "a2", "titre": "HTML5 sémantique et validation W3C", "niveau": "debutant", "prix": 120, "places": 4, "formateur": "Sarah Benali" },
+  { "id": "a3", "titre": "CSS Grid et Flexbox sans framework", "niveau": "intermediaire", "prix": 150, "places": 0, "formateur": "Sarah Benali" },
+  { "id": "a4", "titre": "TypeScript strict de zéro à la production", "niveau": "intermediaire", "prix": 320, "places": 6, "formateur": "Karim Mansouri" },
+  { "id": "a5", "titre": "Navigation clavier et tests lecteurs d'écran", "niveau": "debutant", "prix": 90, "places": 7, "formateur": "Sarah Benali" },
+  { "id": "a6", "titre": "Initiation à Git et GitHub", "niveau": "debutant", "prix": 80, "places": 10, "formateur": "Ayoub Mekouar" },
+  { "id": "a7", "titre": "Communication asynchrone avec fetch et AbortController", "niveau": "intermediaire", "prix": 210, "places": 5, "formateur": "Karim Mansouri" },
+  { "id": "a8", "titre": "Audit heuristique selon les 10 règles de Nielsen", "niveau": "debutant", "prix": 110, "places": 6, "formateur": "Sarah Benali" },
+  { "id": "a9", "titre": "Optimisation Core Web Vitals (LCP, CLS, TBT)", "niveau": "avance", "prix": 390, "places": 3, "formateur": "Karim Mansouri" },
+  { "id": "a10", "titre": "Design System et variables CSS", "niveau": "debutant", "prix": 140, "places": 9, "formateur": "Sarah Benali" },
+  { "id": "a11", "titre": "Architecture d'une SPA avec React Router", "niveau": "avance", "prix": 480, "places": 2, "formateur": "Karim Mansouri" },
+  { "id": "a12", "titre": "Déploiement continu et qualité logicielle", "niveau": "intermediaire", "prix": 260, "places": 5, "formateur": "Ayoub Mekouar" }
+]
